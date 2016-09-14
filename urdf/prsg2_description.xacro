@@ -17,7 +17,7 @@
   <xacro:property name="caster_thickness" value="0.012" />
   <xacro:property name="caster_setback" value="${caster_diameter / 2}" />
 
-  <xacro:property name="ir_setback" value="0.015" />
+  <xacro:property name="ir_setback" value="0.00" />
 
   <xacro:property name="camera_height" value="0.075" />
   <xacro:property name="camera_setback" value="0.025" />
@@ -107,12 +107,18 @@
       l0="base_link" l1="${link_name}" />
   </xacro:macro>
 
+  <!--
   <xacro:ir_sensor link_name="ir_left_link" theta="${90 * degree}" />
+  -->
   <xacro:ir_sensor link_name="ir_left_front_link" theta="${45 * degree}" />
   <xacro:ir_sensor link_name="ir_front_link" theta="${0 * degree}" />
   <xacro:ir_sensor link_name="ir_right_front_link" theta="${-45 * degree}" />
+  <!--
   <xacro:ir_sensor link_name="ir_right_link" theta="${-90 * degree}" />
+  -->
+  <xacro:ir_sensor link_name="ir_rear_link" theta="${180 * degree}" />
 
+  <!-- No camera
   <link name="camera_link">
     <visual>
       <origin xyz="-0.005 0 0" />
@@ -126,5 +132,5 @@
   </link>
   <xacro:polar_position r="${base_diameter/2 - camera_setback}" theta="0"
     z="${deck_height + camera_height}" l0="base_link" l1="camera_link" />
-
+  -->
 </robot>

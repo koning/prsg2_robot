@@ -18,7 +18,7 @@ base_frame: base_link
 
 # === Robot drivetrain parameters
 wheel_diameter: 0.070
-wheel_track: 0.198
+wheel_track: 0.203
 encoder_resolution: 2449 # = 48*46.8512 from Pololu for 130rpm motors
 gear_reduction: 1 # Can't use gear_reduction since it messes up motor ctl.
 motors_reversed: False
@@ -41,13 +41,15 @@ Ko: 100
 # * PhidgetsCurrent (20 Amp, DC)
 
 sensors: {
-  ir_1:            {pin: 0, type: GP2Y0A60, rate: 10, frame: 'ir_left_link'},
-  ir_2:            {pin: 2, type: GP2Y0A60, rate: 10,
+  ir_1:            {pin: 2, type: GP2Y0A60, rate: 10,
                     frame: 'ir_left_front_link'},
-  ir_3:            {pin: 3, type: GP2Y0A60, rate: 10, frame: 'ir_front_link'},
-  ir_4:            {pin: 4, type: GP2Y0A60, rate: 10,
+  ir_2:            {pin: 3, type: GP2Y0A60, rate: 10, frame: 'ir_front_link'},
+  ir_3:            {pin: 4, type: GP2Y0A60, rate: 10,
                     frame: 'ir_right_front_link'},
-  ir_5:            {pin: 5, type: GP2Y0A60, rate: 10, frame: 'ir_right_link'},
+  ir_4:            {pin: 5, type: GP2Y0A60, rate: 10,
+                    frame: 'ir_rear_link'},
+#  ir_5:            {pin: 0, type: GP2Y0A60, rate: 10, frame: 'ir_left_link'},
+#  ir_6:            {pin: 5, type: GP2Y0A60, rate: 10, frame: 'ir_right_link'},
   button_a:        {pin: 100, type: Digital, rate: 10},
   button_b:        {pin: 101, type: Digital, rate: 10},
 # Cannot use button C because reading it interferes with motor 1 PWM.

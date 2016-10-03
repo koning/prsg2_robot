@@ -48,8 +48,8 @@ sensors: {
                     frame: 'ir_right_front_link'},
   ir_4:            {pin: 5, type: GP2Y0A60, rate: 10,
                     frame: 'ir_rear_link'},
-#  ir_5:            {pin: 0, type: GP2Y0A60, rate: 10, frame: 'ir_left_link'},
-#  ir_6:            {pin: 5, type: GP2Y0A60, rate: 10, frame: 'ir_right_link'},
+  ir_5:            {pin: 0, type: GP2Y0A60, rate: 10, frame: 'ir_left_link'},
+  ir_6:            {pin: 1, type: GP2Y0A60, rate: 10, frame: 'ir_right_link'},
   button_a:        {pin: 100, type: Digital, rate: 10},
   button_b:        {pin: 101, type: Digital, rate: 10},
 # Cannot use button C because reading it interferes with motor 1 PWM.

@@ -108,9 +108,9 @@
   </xacro:macro>
 
   <xacro:ir_sensor link_name="ir_left_link" theta="${70 * degree}" angle="${20 *degree}" />
-  <xacro:ir_sensor link_name="ir_left_front_link" theta="${52 * degree}" />
+  <xacro:ir_sensor link_name="ir_left_front_link" theta="${38 * degree}" />
   <xacro:ir_sensor link_name="ir_front_link" theta="${0 * degree}" />
-  <xacro:ir_sensor link_name="ir_right_front_link" theta="${-52 * degree}" />
+  <xacro:ir_sensor link_name="ir_right_front_link" theta="${-38 * degree}" />
   <xacro:ir_sensor link_name="ir_right_link" theta="${-70 * degree}" angle="${-20 * degree}" />
   <xacro:ir_sensor link_name="ir_rear_link" theta="${180 * degree}" />
 

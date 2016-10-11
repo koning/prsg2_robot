@@ -39,6 +39,10 @@ Ko: 100
 # * PololuMotorCurrent
 # * PhidgetsVoltage
 # * PhidgetsCurrent (20 Amp, DC)
+# * Imu:
+# *     GY-521 (MPU6050)
+# *     BNO055
+# *     MPU9250
 
 sensors: {
   ir_1:            {pin: 2, type: GP2Y0A60, rate: 10,
@@ -56,4 +60,5 @@ sensors: {
 #  button_c:       {pin: 102, type: Digital, rate: 10},
   battery_voltage: {pin: 106, type: Analog, rate: 1},
   arduino_led:     {pin: 13, type: Digital, rate: 10, direction: output},
+  imu_gy521:       {address: 0x69, type: GY521, rate: 10, direction: output},
 }

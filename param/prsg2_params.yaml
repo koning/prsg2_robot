@@ -24,10 +24,10 @@ gear_reduction: 1 # Can't use gear_reduction since it messes up motor ctl.
 motors_reversed: False
 
 # === PID parameters
-Kp: 100
-Kd: 0
+Kp: 20
+Kd: 20
 Ki: 0
-Ko: 100
+Ko: 20
 #accel_limit: 1.0
 
 # === Sensor definitions.  Examples only - edit for your robot.
@@ -39,6 +39,10 @@ Ko: 100
 # * PololuMotorCurrent
 # * PhidgetsVoltage
 # * PhidgetsCurrent (20 Amp, DC)
+# * Imu:
+# *     GY-521 (MPU6050)
+# *     BNO055
+# *     MPU9250
 
 sensors: {
   ir_1:            {pin: 2, type: GP2Y0A60, rate: 10,
@@ -56,5 +60,6 @@ sensors: {
 #  button_c:       {pin: 102, type: Digital, rate: 10},
   battery_voltage: {pin: 106, type: Analog, rate: 1},
   arduino_led:     {pin: 13, type: Digital, rate: 10, direction: output},
-  imu_mpu6050:     {addr: 0x69, type: MPU6050, rate: 10, direction: output},
+#  imu_mpu6050:     {addr: 0x69, type: MPU6050, rate: 10, direction: output},
+#  imu_gy521:       {address: 0x69, type: GY521, rate: 10, direction: output},
 }
